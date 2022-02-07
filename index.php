@@ -1,3 +1,4 @@
 <?php get_header(); ?>
-<h1>Hello World!!</h1>
+<h1>Web Designer</h1>
+<p>Nakaji</p>
 <?php get_footer(); ?>
