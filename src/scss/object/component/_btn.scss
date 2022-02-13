@@ -1,7 +1,25 @@
 @charset "utf-8";
 
-a{
-    &:hover{
-        opacity: 0.7;
+.c-btn {
+    color: $white;
+    background-color: $pink;
+    border-radius: 40px;
+    width: 210px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .05em;
+    margin: 0 auto;
+    font-size: 16px;
+    z-index: 3;
+    & > a {
+        text-decoration: none;
+        &:link {
+            color: $white;
+        }
+        &:visited {
+            color: $white;
+        }
     }
 }

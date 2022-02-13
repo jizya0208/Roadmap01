@@ -1,10 +1,21 @@
 @charset "utf-8";
 
+/* yarn add */
+@import 'animate.css';
+
 /* Foundation */
 @import './foundation/_base';
+@import './foundation/_normalize';
+@import './foundation/_color';
+@import './foundation/_mediaquery';
+
+/* Layout */
+@import './layout/_header';
+@import './layout/_footer';
 
 /* Component */
 @import './object/component/_btn';
+@import './object/component/_ttl';
 
 /* Project */
-@import './object/project/_top';
+@import './object/project/_home';

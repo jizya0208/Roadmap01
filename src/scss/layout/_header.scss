@@ -1,1 +1,50 @@
 @charset "utf-8";
+
+.l-header {
+  width: calc(100% - 200px);
+  color: $white;
+  position: fixed;
+  height: 80px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  top: 0;
+  &__logo {
+    width: 300px;
+    font-size: 24px;
+    & a:link, a:visited {
+      color: inherit;
+    }
+  }
+  & .global-nav {
+     margin-left: auto;
+     & ul {
+      display: flex;
+      justify-content: center;
+      vertical-align: center;
+      & li {
+       padding: 0 2.5em;
+       & a:link, a:visited {
+          color: $white;
+       }
+      }
+    }
+  }
+}
+
+.l-header.change-color {
+  background-color: $white;
+  color: $dark-green;
+  transition: .6s;
+  & .global-nav  {
+    & ul {
+      & li {
+        & a, a:link, a:visited {
+          color: $dark-green;
+        }
+      }
+    }
+  }
+}

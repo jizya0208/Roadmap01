@@ -10,25 +10,19 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="header-logo">Nakaji portfoliO</h1>
-        <nav>
+    <header class="l-header">
+        <div class="l-header__wrapper">
+            <h1 class="l-header__logo"><a href="/">Nakaji portfoliO</a></h1>
+        </div>
+        <nav class="global-nav">
             <ul> 
-                <li><a>HOME</a></li>
-                <li><a>WORKS</a></li>
-                <li><a>ABOUT</a></li>
-                <li><a>SKILL</a></li>
-                <li><a>SERVICE</a></li>
-                <li><a>CONTACT</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/works">WORKS</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/skill">SKILL</a></li>
+                <li><a href="/service">SERVICE</a></li>
+                <li><a href="/contact">CONTACT</a></li>
             </ul>
-            <?php
-			// wp_nav_menu(
-			// 	array(
-			// 		'theme_location' => 'menu-1',
-			// 		'menu_id'        => 'primary-menu',
-			// 	)
-			// );
-			?>
         </nav>
-
     </header>
+    

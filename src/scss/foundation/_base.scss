@@ -1,3 +1,20 @@
-h1{
-    color: red;
+header, nav, h2, .main-visual, footer {
+ font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
 }
+
+a {
+   text-decoration: none;
+   &:link { color: #008970; } 
+   &:visited { color: #003d41; }
+   &:hover { opacity: 0.7; }
+}
+
+ul {
+ list-style: none;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+ width /***/:auto;
+ }
