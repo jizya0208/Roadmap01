@@ -11,7 +11,7 @@
             <li><a href="/works">WORKS</a></li>
             <li><a href="/about">ABOUT</a></li>
             <li><a href="/skill">SKILL</a></li>
-            <li><a href="/service">SERVICE</a></li>
+            <li><a href="/#service">SERVICE</a></li>
             <li><a href="/contact">CONTACT</a></li>
          </ul>
    </nav>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.p-skill {
+   width: 100%;
+   & .container {
+      padding: 30px 12.5%;
+      color: $black;
+      & .heading {
+         border-left: 3px solid $black;
+         font-weight: bold;
+         font-size: 20px;
+         letter-spacing: .05em;
+         padding: 10px 20px;
+         margin-bottom: 25px;
+      }
+   }
+}

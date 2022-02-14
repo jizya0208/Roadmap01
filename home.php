@@ -10,7 +10,7 @@
            お仕事のご依頼は<a href="/contact">こちら</a>からお願いいたします。
            <i class="fas fa-home">koko</i>
        </p>
-       <div class="body">
+       <div class="body" id="section">
            <h3 class="c-ttl">SERVICE</h3>
            <ul class="service-list">
               <li class="service-list__item">
