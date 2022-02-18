@@ -1,1 +1,12 @@
 @charset "utf-8";
+
+.p-contact {
+   & .form-box {
+      background-color: $grey;
+      width: 70%;
+      margin: 15vh auto;
+      padding: 30px 20px;
+      & .item {
+      }
+   }
+}
