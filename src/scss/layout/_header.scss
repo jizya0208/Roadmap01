@@ -2,7 +2,6 @@
 
 .l-header {
   width: calc(100% - 200px);
-  color: $white;
   position: fixed;
   height: 80px;
   padding: 0 100px;
@@ -11,38 +10,60 @@
   align-items: center;
   z-index: 10;
   top: 0;
+  background-color: $white;
+  color: $dark-green;
   &__logo {
     width: 300px;
     font-size: 24px;
-    & a:link, a:visited {
+    & a:link,
+    a:visited {
       color: inherit;
     }
   }
   & .global-nav {
-     margin-left: auto;
-     & ul {
+    margin-left: auto;
+    & ul {
       display: flex;
       justify-content: center;
       vertical-align: center;
       & li {
-       padding: 0 2.5em;
-       & a:link, a:visited {
-          color: $white;
-       }
+        padding: 0 2.5em;
+        & a:link,
+        a:visited {
+          color: $dark-green;
+        }
       }
     }
   }
 }
 
-.l-header.change-color {
-  background-color: $white;
-  color: $dark-green;
-  transition: .6s;
-  & .global-nav  {
+/** topページのみ透過背景から白背景に変更*/
+.home > .l-header {
+  color: $white;
+  background-color: rgba($color: $white, $alpha: 0);
+  & .global-nav {
     & ul {
       & li {
-        & a, a:link, a:visited {
-          color: $dark-green;
+        & a,
+        a:link,
+        a:visited {
+          color: $white;
+        }
+      }
+    }
+  }
+  &.change-color {
+    background-color: $white;
+    transition: 0.6s;
+    color: $dark-green;
+    & .global-nav {
+      & ul {
+        & li {
+          & a,
+          a:link,
+          a:visited {
+            color: $dark-green;
+          }
         }
       }
     }

@@ -15,6 +15,9 @@
             <li><a href="/contact">CONTACT</a></li>
          </ul>
    </nav>
+   <div class="c-btn--scroll">
+      <i class="fas fa-angle-up"></i>
+   </div>
    <p class="">
       <small>©︎Nakaji portfoliO</small>
    </p>

@@ -1,2 +1,2 @@
-console.log('start')
 import './header';
+import './btn';

@@ -8,6 +8,6 @@ jQuery(function () {
          jQuery('.l-header').removeClass('change-color');
      }
    });
-   var height = $('.l-header').outerHeight();
-   $('main').css('padding-top', height);
+   var height = jQuery('.l-header').outerHeight();
+   jQuery('main').css('padding-top', height);
 });
