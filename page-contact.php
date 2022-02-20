@@ -5,6 +5,7 @@ Template Name: お問い合わせ
 ?>
 <?php get_header(); ?>
    <main>
+      <?php custom_breadcrumb(); ?>
       <section class="contact-form">
          <div class="p-contact">
             <h1 class="c-ttl">CONTACT</h1>

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
    <main>
       <section class="p-skill">
+         <?php custom_breadcrumb(); ?>
          <div class="container">
             <h1 class="c-ttl">SKILL</h1>
             <p class="txt">デザイン・コーディング・WordPress・アクセス解析など、Web領域の全般に対応できるのが私の強みです。</p>

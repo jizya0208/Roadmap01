@@ -1,1 +1,42 @@
 @charset "utf-8";
+
+
+.p-about {
+   width: 100%;
+   & .container {
+      padding: 30px 12.5%;
+      color: $black;
+      & .profile-img {
+         width: 60%;
+         height: auto;
+         text-align: center;
+         margin: 0 auto;
+      }
+      & .sns-link {
+         display: flex;
+         justify-content: center;
+         & .img-box {
+            height: 40px;
+            width: 40px;
+            transition: .5s;
+            margin: 10px 15px;
+            &:hover {
+               transform: scale(1.2);
+            }
+         }
+      }
+      & .heading {
+         border-left: 3px solid $black;
+         font-weight: bold;
+         font-size: 20px;
+         letter-spacing: .05em;
+         padding: 10px 20px;
+         margin: 20px 0 10px;
+      }
+      & .return {
+         text-align: center;
+         margin: 10px auto;
+         
+      }
+   }
+}

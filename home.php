@@ -11,7 +11,6 @@
             <p class="description">
                 2022年12月は、まだ対応可能な枠がございます。<br>
                 お仕事のご依頼は<a href="/contact">こちら</a>からお願いいたします。
-                <i class="fas fa-home">koko</i>
             </p>
             <div class="body" id="section">
                 <h3 class="c-ttl">SERVICE</h3>

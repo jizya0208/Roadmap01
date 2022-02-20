@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.l-breadcrumb {
+   font-size: 10px;
+   letter-spacing: .05em;
+   line-height: 1.6;
+   color: $black;
+   &__list {
+      display: flex;
+      flex-direction: row;
+      margin: 5px 15px;
+   }
+   &__item {
+      display: block;
+      padding: 0 5px;
+      & span {
+         display: inline-block;
+      }
+   }
+}
