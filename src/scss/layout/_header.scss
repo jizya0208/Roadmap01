@@ -21,6 +21,7 @@
     }
   }
   & .global-nav {
+    display: none;
     margin-left: auto;
     & ul {
       display: flex;
@@ -34,6 +35,89 @@
         }
       }
     }
+    @include md {
+      display: block;
+    }
+  }
+  &__menu {
+    position: absolute;
+    right: 10px;
+    @include md {
+      display: none;
+    }
+    & .menu-btn {
+      background-color: rgba($color: $white, $alpha: 0);
+      position: relative;
+      z-index: 9999;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      border: none;
+      & > span {
+        position: absolute;
+        display: inline-block;
+        background-color: $black;
+        border-radius: 1.5px;
+        height: 1.5px;
+        line-height: 22px;
+        left: 15%;
+        width: 70%;
+        transition: all 0.5s;
+        &:nth-of-type(1) {
+          top: 12px;
+        }
+        &:nth-of-type(2) {
+          top: 24px;
+        }
+      }
+    }
+    & .menu-btn[aria-expanded='false'] {
+      & > span:nth-of-type(1) {
+          top: 12px;
+      }
+      & > span:nth-of-type(2) {
+          top: 24px;
+      }
+    }
+    & .menu-btn[aria-expanded='true'] {
+      & > span {
+          top: 0;
+      }
+      & > span:nth-of-type(1) {
+          -webkit-transform: translateY(20px) rotate(-45deg);
+          transform: translateY(20px) rotate(-45deg);
+      }
+      & > span:nth-of-type(2) {
+          -webkit-transform: translateY(-20px) rotate(45deg);
+          transform: translateY(20px) rotate(45deg);
+      }
+    }
+    & .menu {
+      display: none;
+      height: 100%;
+      width: 180px;
+      background-color: $whitesmoke;
+      color: $green;
+      z-index: 10;
+      position: fixed;
+      top: 0;
+      right: 0;
+      & .menu-nav {
+        & ul {
+          flex-flow: column;
+          display: flex;
+          justify-content: center;
+          vertical-align: center;
+          padding-top: 90px;
+          & li {
+            padding: 1.5em 2em;
+            & a:link, a:visited {
+              color: $dark-green;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -44,13 +128,25 @@
   & .global-nav {
     & ul {
       & li {
-        & a,
-        a:link,
-        a:visited {
+        & a, a:link, a:visited {
           color: $white;
         }
       }
     }
+  }
+  & .l-header__menu {
+    color: $white;
+    & .menu-btn {
+      color: $white;
+      & > span {
+        background-color: $white;
+      }
+    }
+    & .menu-btn[aria-expanded='true'] {
+      & > span {
+        background-color: $black;
+      }
+    } 
   }
   &.change-color {
     background-color: $white;
@@ -64,6 +160,15 @@
           a:visited {
             color: $dark-green;
           }
+        }
+      }
+    }
+    & .l-header__menu {
+      color: $black;
+      & .menu-btn {
+        color: $black;
+        & > span {
+          background-color: $black;
         }
       }
     }

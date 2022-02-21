@@ -35,5 +35,23 @@
                 <li><a href="/contact">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="l-header__menu">
+            <button class="menu-btn" type="button" title="メニュー" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu">
+               <nav class="menu-nav">
+                   <ul> 
+                       <li><a href="/">HOME</a></li>
+                       <li><a href="/works">WORKS</a></li>
+                       <li><a href="/about">ABOUT</a></li>
+                       <li><a href="/skill">SKILL</a></li>
+                       <li><a href="/#service">SERVICE</a></li>
+                       <li><a href="/contact">CONTACT</a></li>
+                   </ul>
+               </nav>
+            </div>
+         </div>
     </header>
     
