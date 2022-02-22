@@ -86,7 +86,7 @@ function create_post_type() {
   );
   register_taxonomy(
     'works-cat',
-    'news',
+    'works',
     array(
       'hierarchical' => true,
       'update_count_callback' => '_update_post_term_count',
@@ -98,8 +98,8 @@ function create_post_type() {
   );
 
   register_taxonomy(
-    'news-tag',
-    'news',
+    'works-tag',
+    'works',
     array(
       'label' => 'タグ',
       'hierarchical' => false,
@@ -109,5 +109,5 @@ function create_post_type() {
 }
 add_action( 'init', 'create_post_type' ); // アクションに上記関数をフックします
 
-/* ---------- thumbnailの有効化---------- */
+/* ---------- アイキャッチ画像（投稿サムネイル）機能thumbnailの有効化---------- */
 add_theme_support('post-thumbnails');
