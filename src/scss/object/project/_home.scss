@@ -17,9 +17,12 @@
       background-repeat: no-repeat;
       position: fixed;
       width: 100%;
-      height: 40vw;
+      height: 60vh;
       top: 0;
       left: 0;
+      @include md {
+        height: 40vw;
+      }
     }
     &__ttl {
       font-size: 80px;
@@ -42,10 +45,17 @@
       & .service-list {
         display: flex;
         width: 100%;
+        flex-direction: column;
+        @include md {
+          flex-direction: row;
+        }
         &__item {
-          width: 33%;
-          padding: 20px 50px;
+          width: 100%;
           text-align: center;
+          @include md {
+            width: 33%;
+            padding: 20px 50px;
+          }
           & .img-box {
             width: 128px;
             height: 128px;
