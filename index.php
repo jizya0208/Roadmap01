@@ -3,6 +3,7 @@
     <h2 class="">Web Designer</h2>
     <p class="">Nakaji</p>
 </div>
+<p>index.phpです</p>
 <p class="text-center">
     2022年12月は、まだ対応可能な枠がございます。
     お仕事のご依頼は<a href="/contact">こちら</a>からお願いいたします。

@@ -98,7 +98,7 @@ function create_post_type() {
   );
 
   register_taxonomy(
-    'works-tag',
+    'works_tag',
     'works',
     array(
       'label' => 'タグ',
@@ -111,3 +111,11 @@ add_action( 'init', 'create_post_type' ); // アクションに上記関数を�
 
 /* ---------- アイキャッチ画像（投稿サムネイル）機能thumbnailの有効化---------- */
 add_theme_support('post-thumbnails');
+
+/* ---------- ---------- */
+function add_post_category_archive( $wp_query ) {
+  if ($wp_query->is_main_query() && $wp_query->is_category()) {
+    $wp_query->set( 'post_type', array('post','article'));
+  }
+}
+add_action( 'pre_get_posts', 'add_post_category_archive' , 10 , 1);

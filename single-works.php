@@ -8,7 +8,7 @@ Template Name: 制作実績
       <?php custom_breadcrumb(); ?>
       <section class="">
          <div class="">
-            <h1 class="c-ttl">CONTACT</h1>
+            <h1 class="c-ttl">WORKS</h1>
             <p class="">お仕事のご依頼などお待ちしております。</p>
             <div class="">
                <?php if (have_posts()): ?>
