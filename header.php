@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="nakajiのポートフォリオサイトです" />
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/src/images/favicon.ico" />
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/dist/style.css">
           <!-- OGPタグ/twitterカード -->
     <meta property="og:url" content="http://nk-portfolio.xyz/" />
     <meta property="og:title" content="なかじーのぽーとふぉりお" />
@@ -17,6 +17,7 @@
     <meta name="twitter:card" content="Summary Card" />
     <meta property="og:site_name" content="合人社グループ採用サイト" />
     <meta property="og:locale" content="ja_JP" />
+    <script src="/src/dist/bundle.js"></script>
     <?php wp_head(); ?>
 </head>
 

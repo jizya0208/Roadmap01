@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: お問い合わせ
+Template Name: contact
 */
 ?>
 <?php get_header(); ?>

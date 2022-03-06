@@ -85,7 +85,7 @@ function create_post_type() {
     )
   );
   register_taxonomy(
-    'works-cat',
+    'works_cat',
     'works',
     array(
       'hierarchical' => true,
@@ -110,12 +110,28 @@ function create_post_type() {
 add_action( 'init', 'create_post_type' ); // アクションに上記関数をフックします
 
 /* ---------- アイキャッチ画像（投稿サムネイル）機能thumbnailの有効化---------- */
-add_theme_support('post-thumbnails');
+// add_theme_support('post-thumbnails');
 
-/* ---------- ---------- */
-function add_post_category_archive( $wp_query ) {
-  if ($wp_query->is_main_query() && $wp_query->is_category()) {
-    $wp_query->set( 'post_type', array('post','article'));
+// /* ---------- ---------- */
+// function add_post_category_archive( $wp_query ) {
+//   if ($wp_query->is_main_query() && $wp_query->is_category()) {
+//     $wp_query->set( 'post_type', array('post','article'));
+//   }
+// }
+// add_action( 'pre_get_posts', 'add_post_category_archive' , 10 , 1);
+
+
+//カスタム投稿でページネーションを使う問題を解決するにはpre_get_posts関数を使う
+function change_posts_per_page($query) {
+  if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  if ( $query->is_tax( 'works_cat' ) ) {//ここでタクソノミー名を設定
+    $query->set( 'posts_per_page', '5' );//ここで表示件数を設定
   }
 }
-add_action( 'pre_get_posts', 'add_post_category_archive' , 10 , 1);
+add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+
+
+

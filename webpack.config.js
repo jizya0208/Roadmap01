@@ -4,20 +4,17 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { default: DevServer } = require("next/dist/server/dev/next-dev-server");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
   // コンパイルモード
   mode: "production",
   // エントリーポイントの設定
-  entry: {
-    // コンパイル対象のファイルを指定
-    index: path.resolve(__dirname, "./src/js/index.js"),
-    "style.css": path.resolve(__dirname, "./src/scss/style.scss"),
-  },
-  // 出力設定
+  entry: "./src/js/index.js",
+  // ビルド後、'./dist/my-bundle.js'というbundleファイルを生成する
   output: {
-    path: path.resolve(__dirname, "./"), // 出力先フォルダを絶対パスで指定
-    filename: "[name].js", // [name]にはentry:で指定したキーが入る
+    path: path.resolve(__dirname, "src/dist"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -38,7 +35,12 @@ module.exports = {
     new FixStyleOnlyEntriesPlugin(), // CSS別出力時の不要JSファイルを削除
     new MiniCssExtractPlugin({
       // CSSの出力先
-      filename: "[name]", // 出力ファイル名を相対パスで指定（[name]にはentry:で指定したキーが入る）
+      filename: "style.css", // 出力ファイル名を相対パスで指定（[name]にはentry:で指定したキーが入る）
+    }),
+    new BrowserSyncPlugin({
+      host: "localhost",
+      port: 8001,
+      proxy: "http://localhost:8000",
     }),
   ],
   // node_modules を監視（watch）対象から除外

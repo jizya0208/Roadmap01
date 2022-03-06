@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: skill
+*/
+get_header(); ?>
    <main>
       <section class="p-skill">
          <?php custom_breadcrumb(); ?>

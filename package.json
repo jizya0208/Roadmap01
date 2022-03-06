@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "sass": "^1.49.0",
     "scss": "^0.2.4"
   },
@@ -25,5 +27,5 @@
     "start": "webpack-dev-server",
     "build": "webpack --mode production",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,md,html}"
- }
+  }
 }
