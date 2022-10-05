@@ -15,12 +15,11 @@
     <meta property="og:description" content="なかじーのポートフォリオサイトです" />
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/src/images/og-img.png" />
     <meta name="twitter:card" content="Summary Card" />
-    <meta property="og:site_name" content="合人社グループ採用サイト" />
+    <meta property="og:site_name" content="なかじーのポートフォリオサイト" />
     <meta property="og:locale" content="ja_JP" />
     <script src="/src/dist/bundle.js"></script>
     <?php wp_head(); ?>
 </head>
-
 <body>
     <header class="l-header">
         <div class="l-header__wrapper">
@@ -30,6 +29,7 @@
             <ul> 
                 <li><a href="/">HOME</a></li>
                 <li><a href="/works">WORKS</a></li>
+                <li><a href="/news">NEWS</a></li>
                 <li><a href="/about">ABOUT</a></li>
                 <li><a href="/skill">SKILL</a></li>
                 <li><a href="/#service">SERVICE</a></li>

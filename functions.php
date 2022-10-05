@@ -106,7 +106,61 @@ function create_post_type() {
       'public' => true,
     )
   );
-}
+
+  register_post_type('news', // 投稿タイプ名の定義
+      array(
+          'labels' => array(
+              'name' => __('お知らせ'),  // メニューに表示されるラベル
+              'singular_name' => __('お知らせ'), // 単体系のラベル
+          ),
+          'description' => 'ディスクリプション', // ディスクリプションを指定
+          'public' => true, // 投稿タイプをパブリックにする
+          'has_archive' => true, // アーカイブを有効にする
+          'hierarchical' => false, // ページ階層の指定
+          'menu_position' => 5,
+          'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt', 'author', 'trackbacks', 'comments', 'revisions', 'page-attributes') // サポートの指定
+        )
+    );
+  }
+  // カスタムタクソノミーの追加
+  add_action('init', 'add_custom_taxonomy');
+  function add_custom_taxonomy(){
+      // カテゴリー設定
+      register_taxonomy('news_category', 'news', array(
+          'hierarchical' => true,
+          'label' => 'カテゴリー',
+          'show_ui' => true,
+          'public' => true
+      ));
+      register_taxonomy_for_object_type('news_category', 'news');
+  }
+  // メインクエリの書き換え
+  add_action('pre_get_posts', 'original_pre_get_posts');
+  function original_pre_get_posts($query)
+  {
+      if (is_admin() || !$query->is_main_query()) {
+          return;
+      }
+      // アーカイブページの場合
+      if(is_archive()) {
+          // １ページに全ての記事を表示
+          $query->set('posts_per_page', -1);
+          // 年別アーカイブを選択していない場合は閲覧日時の年の記事のみを表示する
+          if(!is_year()) {
+              // ワードプレスに設定された時間（東京）の年を取得
+              $year = date_i18n('Y');
+              $query->set(
+                  'date_query',
+                  [
+                      [
+                          'inclusive' => true, // 01-01 を含む
+                          'after' => $year . '-01-01',
+                      ]
+                  ]
+              );
+          }
+      }
+  }
 add_action( 'init', 'create_post_type' ); // アクションに上記関数をフックします
 
 /* ---------- アイキャッチ画像（投稿サムネイル）機能thumbnailの有効化---------- */
@@ -131,7 +185,3 @@ function change_posts_per_page($query) {
   }
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
-
-
-
-

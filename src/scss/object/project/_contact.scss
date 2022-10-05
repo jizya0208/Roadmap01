@@ -1,36 +1,38 @@
 @charset "utf-8";
 
 .p-contact {
-   font-size: 16px;
-   & .lead {
-      text-align: center;
-   }
-   & .form-box {
-      background-color: $whitesmoke;
-      width: 70%;
-      margin: 8vh auto;
-      padding: 30px 20px;
-      & .form-group {
-         margin: 2.5%;
-         & label {
-            display: inline-block;
-            padding-bottom: 4px;
-         }
-         & .annotation {
-            padding-left: 10px;
-            font-size: 10px;
-            line-height: 2;
-            color: $green;
-         }
-         & .item {
-            line-height: 2.5;
-         }
-         & .submit {
-            color: $white;
-            & input {
-               color: inherit;
-            }
-         }
+  font-size: 16px;
+  & .lead {
+    text-align: center;
+  }
+  & .form-box {
+    background-color: $whitesmoke;
+    width: 70%;
+    margin: 8vh auto;
+    padding: 30px 20px;
+    & .form-group {
+      margin: 1%;
+      max-width: 100%;
+      overflow: hidden;
+      & label {
+        display: inline-block;
+        padding-bottom: 4px;
       }
-   }
+      & .annotation {
+        padding-left: 10px;
+        font-size: 10px;
+        line-height: 2;
+        color: $green;
+      }
+      & .item {
+        line-height: 2.5;
+      }
+      & .submit {
+        color: $white;
+        & input {
+          color: inherit;
+        }
+      }
+    }
+  }
 }

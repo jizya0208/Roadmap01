@@ -12,15 +12,22 @@
     & .category {
       display: flex;
       & li {
-        padding-left: 3em;
+        padding-left: 1em;
+        @include md {
+          padding-left: 3em;
+        }
       }
     }
     & .img-box {
-      width: 400px;
-      height: 300px;
+      width: 320px;
+      height: 240px;
       text-align: center;
       margin: 0 auto;
       display: inline-block;
+      @include md {
+        width: 400px;
+        height: 300px;
+      }
       & img {
         height: 100%;
       }
@@ -31,6 +38,7 @@
     flex-wrap: wrap;
     padding: 100px 0;
     gap: 15px 8px;
+    justify-content: center;
     & li {
       display: flex;
       flex-direction: column;

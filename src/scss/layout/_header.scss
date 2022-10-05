@@ -4,7 +4,7 @@
   width: calc(100% - 200px);
   position: fixed;
   height: 80px;
-  padding: 0 100px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,9 +12,16 @@
   top: 0;
   background-color: $white;
   color: $dark-green;
+  @include lg {
+    padding: 0 100px;
+  }
   &__logo {
-    width: 300px;
-    font-size: 24px;
+    width: 200px;
+    font-size: 20px;
+    @include lg {
+      width: 300px;
+      font-size: 24px;
+    }
     & a:link,
     a:visited {
       color: inherit;
@@ -28,7 +35,10 @@
       justify-content: center;
       vertical-align: center;
       & li {
-        padding: 0 2.5em;
+        padding: 0 1em;
+        @include lg {
+          padding: 0 2.5em;
+        }
         & a:link,
         a:visited {
           color: $dark-green;

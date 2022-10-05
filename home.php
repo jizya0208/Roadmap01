@@ -37,7 +37,7 @@
                         <p>50サイト以上のテーマ制作の経験があります！</p>
                     </li>
                     </ul>
-                    <div class="c-btn"><a href="/contact">問い合わせ</a></div>
+                    <div class="c-btn my-5"><a href="/contact">問い合わせ</a></div>
                     <h3 class="c-ttl">WORKS</h3>
                     <ul class="work-list">
                     <li class="work-list__item">
